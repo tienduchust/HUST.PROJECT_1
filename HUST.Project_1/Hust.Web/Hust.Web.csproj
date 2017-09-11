@@ -66,6 +66,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app.js" />
+    <Content Include="app.routes.js" />
+    <Content Include="app\common\api-helper.js" />
     <Content Include="content\css\bootstrap.min.css" />
     <Content Include="content\css\font-awesome.min.css" />
     <Content Include="content\fonts\fontello\petronas.svg" />
@@ -164,6 +167,7 @@
     <Content Include="content\libs\toastr.min.js" />
     <Content Include="content\libs\underscore-min.js" />
     <Content Include="gulpfile.js" />
+    <Content Include="Index.html" />
     <Content Include="packages.config" />
     <Content Include="content\libs\angular-route.min.js.map" />
     <Content Include="content\libs\angular.min.js.map" />
@@ -244,8 +248,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\common\" />
-    <Folder Include="app\modules\" />
+    <Folder Include="app\modules\dashboard\" />
     <Folder Include="app\shared\" />
     <Folder Include="content\images\" />
   </ItemGroup>
