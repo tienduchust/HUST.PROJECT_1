@@ -80,6 +80,15 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\common\" />
+    <Folder Include="app\modules\" />
+    <Folder Include="app\shared\" />
+    <Folder Include="content\css\" />
+    <Folder Include="content\fonts\" />
+    <Folder Include="content\images\" />
+    <Folder Include="content\libs\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
