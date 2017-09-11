@@ -84,6 +84,7 @@
     <Folder Include="app\common\" />
     <Folder Include="app\modules\" />
     <Folder Include="app\shared\" />
+    <Folder Include="content\abc\" />
     <Folder Include="content\css\" />
     <Folder Include="content\fonts\" />
     <Folder Include="content\images\" />
