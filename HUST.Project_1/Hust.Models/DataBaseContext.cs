@@ -4,9 +4,8 @@ using System;
 using System.Reflection;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Hust.Models.Mapping;
 
-namespace PPUPI.Models
+namespace Hust.Models
 {
     public partial class DataBaseContext : DbContext
     {

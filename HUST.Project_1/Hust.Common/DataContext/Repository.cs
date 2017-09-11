@@ -1,6 +1,4 @@
-﻿using PPUPI.Helper.Core;
-using PPUPI.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -9,8 +7,11 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Threading.Tasks;
+using Hust.Common.Core;
+using Hust.Common.DataContext;
+using Hust.Models;
 
-namespace PPUPI.Helper.DataContext
+namespace Hust.Common.DataContext
 {
     public class Repository<T> : IRepository<T> where T : class
     {

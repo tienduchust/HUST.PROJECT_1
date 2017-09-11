@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity.ModelConfiguration;
 
-namespace Hust.Models.Mapping
+namespace Hust.Models.Models.Mapping
 {
     public class FilesMap : EntityTypeConfiguration<Files>
     {

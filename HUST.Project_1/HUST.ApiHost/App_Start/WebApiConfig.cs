@@ -19,6 +19,14 @@ namespace HUST.ApiHost
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            // custom JSON
+            var json = config.Formatters.JsonFormatter;
+            json.UseDataContractJsonSerializer = true;
+            json.SerializerSettings.DateTimeZoneHandling = Newtonsoft.Json.DateTimeZoneHandling.Utc;
+            json.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
+            json.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Hust.Models
+namespace Hust.Models.Models
 {
     public class Files
     {

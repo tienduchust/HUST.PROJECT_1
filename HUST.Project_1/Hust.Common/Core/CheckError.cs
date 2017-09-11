@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PPUPI.Helper.Core
+namespace Hust.Common.Core
 {
     public class CheckError
     {

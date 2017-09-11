@@ -4,7 +4,7 @@ using System;
 using System.Configuration;
 using System.IO;
 
-namespace PPUPI.Helper.Core
+namespace Hust.Common.Core
 {
     /// <summary>
     /// Utilities
