@@ -41,6 +41,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,17 +51,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataBaseContext.cs" />
-    <Compile Include="Models\Files.cs" />
-    <Compile Include="Models\Mapping\FilesMap.cs" />
+    <Compile Include="AppHustContext.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\Project.cs" />
+    <Compile Include="Domain\File.cs" />
+    <Compile Include="Migrations\201709121909392_InitDb.cs" />
+    <Compile Include="Migrations\201709121909392_InitDb.Designer.cs">
+      <DependentUpon>201709121909392_InitDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Share\Constants.cs" />
     <Compile Include="Share\Enums.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Mapping\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hust.Common\Hust.Common.csproj">
+      <Project>{abbc4fc8-80f1-4624-9c9e-6912e3ef568a}</Project>
+      <Name>Hust.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201709121909392_InitDb.resx">
+      <DependentUpon>201709121909392_InitDb.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
