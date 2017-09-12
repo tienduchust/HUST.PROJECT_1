@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace PPUPI.Helper.Core
+namespace Hust.Common.Core
 {
     public class Security
     {

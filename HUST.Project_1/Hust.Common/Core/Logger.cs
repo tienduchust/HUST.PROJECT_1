@@ -1,7 +1,7 @@
 ﻿using System;
 using log4net;
 
-namespace PPUPI.Helper.Core
+namespace Hust.Common.Core
 {
     /// <summary>
     /// Helper class that support to write information to log file

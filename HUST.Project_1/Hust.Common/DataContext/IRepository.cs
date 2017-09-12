@@ -1,11 +1,11 @@
-﻿using PPUPI.Helper.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using Hust.Common.Core;
 
-namespace PPUPI.Helper.DataContext
+namespace Hust.Common.DataContext
 {
     public interface IRepository<T>
     {

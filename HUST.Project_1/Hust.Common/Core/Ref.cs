@@ -1,4 +1,4 @@
-﻿namespace PPUPI.Helper.Core
+﻿namespace Hust.Common.Core
 {
     public class Ref<T> where T : class
     {
