@@ -4,14 +4,17 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Hust.Bussiness.EntityFrameWork.Models;
+using Hust.Common.DataContext;
 
 namespace HUST.ApiHost.Controllers
 {
     public class LoginController : ApiController
     {
-        public bool Login()
+        public int Login(StaffMember staffMember)
         {
-            return true;
+            
+            return 1;
         }
     }
 }

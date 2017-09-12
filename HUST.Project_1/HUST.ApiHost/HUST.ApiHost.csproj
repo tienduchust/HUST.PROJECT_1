@@ -219,6 +219,10 @@
       <Project>{884c425b-2f98-4efa-922e-f61ad6dd8fd1}</Project>
       <Name>Hust.Bussiness</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Hust.Common\Hust.Common.csproj">
+      <Project>{ABBC4FC8-80F1-4624-9C9E-6912E3EF568A}</Project>
+      <Name>Hust.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
