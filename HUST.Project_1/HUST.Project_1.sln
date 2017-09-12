@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hust.Web", "Hust.Web\Hust.Web.csproj", "{42D04E58-8AFB-4149-A5A4-CF975234D711}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hust.Common", "Hust.Common\Hust.Common.csproj", "{ABBC4FC8-80F1-4624-9C9E-6912E3EF568A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hust.Bussiness", "Hust.Bussiness\Hust.Bussiness.csproj", "{884C425B-2F98-4EFA-922E-F61AD6DD8FD1}"
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{42D04E58-8AFB-4149-A5A4-CF975234D711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42D04E58-8AFB-4149-A5A4-CF975234D711}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42D04E58-8AFB-4149-A5A4-CF975234D711}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42D04E58-8AFB-4149-A5A4-CF975234D711}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ABBC4FC8-80F1-4624-9C9E-6912E3EF568A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ABBC4FC8-80F1-4624-9C9E-6912E3EF568A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABBC4FC8-80F1-4624-9C9E-6912E3EF568A}.Release|Any CPU.ActiveCfg = Release|Any CPU
