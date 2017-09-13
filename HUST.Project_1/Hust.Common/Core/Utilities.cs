@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using Hust.Models.Share;
+
 using System;
 using System.Configuration;
 using System.IO;
@@ -47,10 +47,10 @@ namespace Hust.Common.Core
         /// <param name="title">title link</param>
         /// <param name="link">link</param>
         /// <returns></returns>
-        public static string GetHereLink(string title, string link)
-        {
-            return string.Format("<a href='{0}'>{1}</a>", string.Concat(GetAppSetting(Constants.AppSetting.LINK_SITE), "/", link), title);
-        }
+        //public static string GetHereLink(string title, string link)
+        //{
+        //    return string.Format("<a href='{0}'>{1}</a>", string.Concat(GetAppSetting(Constants.AppSetting.LINK_SITE), "/", link), title);
+        //}
 
         /// <summary>
         /// ToBase64String

@@ -1,32 +1,72 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
-using Hust.Common.Core;
+using System.Linq;
 
-namespace Hust.Common.DataContext
+namespace SH.Core.Data
 {
-    public interface IRepository<T>
+    /// <summary>
+    ///     Repository
+    /// </summary>
+    public interface IRepository<T> where T : BaseEntity
     {
-        Task<bool> Insert(T entity, Ref<CheckError> checkError = null);
-        Task<bool> InsertRange(IList<T> list, Ref<CheckError> checkError = null);
-        Task<bool> Edit(T entity, IList<string> propertyNamesNotChanged = null, Ref<CheckError> checkError = null);
-        Task<bool> Edit(IList<T> entitys, IList<string> propertyNamesNotChanged = null, Ref<CheckError> checkError = null);
-        Task<bool> Delete(T entity, Ref<CheckError> checkError = null);
-        Task<bool> Delete(object id, Ref<CheckError> checkError = null);
-        Task<bool> DeleteAll(IList<T> list, Ref<CheckError> checkError = null);
-        Task<IEnumerable<T>> Get(Expression<Func<T, bool>> predicate, Ref<CheckError> checkError = null);
-        Task<bool> CheckExist(Expression<Func<T, bool>> predicate, Ref<CheckError> checkError = null);
-        Task<IEnumerable<T>> Get(Expression<Func<T, bool>> predicate, string fieldOrderBy, bool ascending, int skip, int take, Ref<CheckError> checkError = null);
-        Task<IEnumerable<T>> Get(Expression<Func<T, bool>> predicate, string groupBy, string fieldOrderBy, bool ascending, int take, Ref<CheckError> checkError = null);
-        Task<IEnumerable<T>> Get(Expression<Func<T, bool>> predicate, string fieldOrderBy, bool ascending, Ref<CheckError> checkError = null);
-        Task<IEnumerable<T>> GetAll(Ref<CheckError> checkError = null);
-        Task<int> GetCount(Expression<Func<T, bool>> predicate, Ref<CheckError> checkError = null);
-        Task<T> GetById(object id, Ref<CheckError> checkError = null);
-        Task<T> GetOne(Expression<Func<T, bool>> predicate, Ref<CheckError> checkError = null);
-        Task<IEnumerable<T>> Get(string query, SqlParameter[] parameters = null, Ref<CheckError> checkError = null);
-        Task<T> GetOne(string storedProcedureName, SqlParameter[] parameters = null, Ref<CheckError> checkError = null);
-        Task<IEnumerable<SqlParameter>> GetOutPut(string storedProcedureName, SqlParameter[] parameters = null, Ref<CheckError> checkError = null);
+        string IdContext { get; }
+        /// <summary>
+        ///     Gets a table
+        /// </summary>
+        IQueryable<T> Table { get; }
+
+        /// <summary>
+        ///     Gets a table with "no tracking" enabled (EF feature) Use it only when you load record(s) only for read-only
+        ///     operations
+        /// </summary>
+        IQueryable<T> TableNoTracking { get; }
+
+        /// <summary>
+        ///     Get entity by identifier
+        /// </summary>
+        /// <param name="id">Identifier</param>
+        /// <returns>Entity</returns>
+        T GetById(object id);
+
+        /// <summary>
+        ///     Insert entity
+        /// </summary>
+        /// <param name="entity">Entity</param>
+        void Insert(T entity);
+
+        /// <summary>
+        ///     Insert entities
+        /// </summary>
+        /// <param name="entities">Entities</param>
+        void Insert(IEnumerable<T> entities);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entity"></param>
+        void InsertOrUpdate(T entity);
+
+        /// <summary>
+        ///     Update entity
+        /// </summary>
+        /// <param name="entity">Entity</param>
+        void Update(T entity);
+
+        /// <summary>
+        ///     Update entities
+        /// </summary>
+        /// <param name="entities">Entities</param>
+        void Update(IEnumerable<T> entities);
+
+        /// <summary>
+        ///     Delete entity
+        /// </summary>
+        /// <param name="entity">Entity</param>
+        void Delete(T entity);
+
+        /// <summary>
+        ///     Delete entities
+        /// </summary>
+        /// <param name="entities">Entities</param>
+        void Delete(IEnumerable<T> entities);
     }
 }

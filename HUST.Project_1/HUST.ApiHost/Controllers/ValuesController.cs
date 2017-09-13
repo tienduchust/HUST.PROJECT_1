@@ -4,12 +4,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace HUST.ApiHost.Controllers
 {
     public class ValuesController : ApiController
     {
         // GET api/values
+        [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };

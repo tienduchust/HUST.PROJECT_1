@@ -59,24 +59,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\CheckError.cs" />
+    <Compile Include="Core\Disposable.cs" />
     <Compile Include="Core\Logger.cs" />
     <Compile Include="Core\Ref.cs" />
     <Compile Include="Core\Security.cs" />
     <Compile Include="Core\Utilities.cs" />
+    <Compile Include="DataContext\BaseEntity.cs" />
+    <Compile Include="DataContext\BaseEntityTypeConfiguration.cs" />
+    <Compile Include="DataContext\BaseObjectContext.cs" />
+    <Compile Include="DataContext\DataReaderExtensions.cs" />
+    <Compile Include="DataContext\DbContextExtensions.cs" />
+    <Compile Include="DataContext\EfRepository.cs" />
+    <Compile Include="DataContext\IDbContext.cs" />
     <Compile Include="DataContext\IRepository.cs" />
-    <Compile Include="DataContext\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Hust.Models\Hust.Models.csproj">
-      <Project>{bfa9cc70-c490-46c9-9a3d-b101cec9e855}</Project>
-      <Name>Hust.Models</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

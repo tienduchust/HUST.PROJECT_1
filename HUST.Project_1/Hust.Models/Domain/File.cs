@@ -1,8 +1,9 @@
 ﻿using System;
+using SH.Core;
 
 namespace Hust.Models.Models
 {
-    public class Files
+    public class File :BaseEntity
     {
         public Guid FileId { get; set; }
         public string ReferenceType { get; set; }
