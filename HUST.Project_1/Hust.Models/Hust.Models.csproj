@@ -68,12 +68,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppHustContext.cs" />
+    <Compile Include="Domain\JobPosition.cs" />
+    <Compile Include="Domain\Status.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Domain\Project.cs" />
     <Compile Include="Domain\File.cs" />
     <Compile Include="Migrations\201709121909392_InitDb.cs" />
     <Compile Include="Migrations\201709121909392_InitDb.Designer.cs">
       <DependentUpon>201709121909392_InitDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709141653411_addJobPositionStatus.cs" />
+    <Compile Include="Migrations\201709141653411_addJobPositionStatus.Designer.cs">
+      <DependentUpon>201709141653411_addJobPositionStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +102,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201709121909392_InitDb.resx">
       <DependentUpon>201709121909392_InitDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709141653411_addJobPositionStatus.resx">
+      <DependentUpon>201709141653411_addJobPositionStatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

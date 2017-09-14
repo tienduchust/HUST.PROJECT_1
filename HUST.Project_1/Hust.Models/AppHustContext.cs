@@ -27,6 +27,9 @@ namespace Hust.Models
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<File> Files { get; set; }
 
+        public virtual DbSet<JobPosition> JobPositions { get; set; }
+        public virtual DbSet<Status> Statuses  { get; set; }
+
     }
 
     //public class MyEntity

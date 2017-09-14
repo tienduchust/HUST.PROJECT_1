@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './authenication/login/login.component';
 import { appRoutes } from './app.routes';
 
+import { ApiService} from './appservice/api/api.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,7 @@ import { appRoutes } from './app.routes';
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [
     AppComponent
   ]

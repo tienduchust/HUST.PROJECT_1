@@ -1,3 +1,4 @@
+import { ApiService } from './appservice/api/api.service';
 import { Component } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -16,10 +17,10 @@ export class AppComponent {
   /**
    *
    */
-  constructor(private http: Http) {
+  constructor(private http: Http, private api: ApiService) {
     console.log('Start');
-    this.getCotacts();
-    this.getData();
+    const abc =  api._get('http://localhost:8888/api/values/');
+    console.log(abc);
   }
 
   getData() {
