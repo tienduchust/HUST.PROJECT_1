@@ -12,24 +12,24 @@ import 'rxjs/add/operator/map';
 })
 export class AppComponent {
   title = 'app';
-  private url = 'http://localhost:8888/api/values';
-  data: any = {};
-  /**
-   *
-   */
-  constructor(private http: Http, private api: ApiService) {
-    console.log('Start');
-    const abc =  api._get('http://localhost:8888/api/values/');
-    console.log(abc);
+  // private url = 'http://localhost:8888/api/values';
+  // data: any = {};
+  // /**
+  //  *
+  //  */
+  // constructor(private http: Http, private api: ApiService) {
+  //   console.log('Start');
+    // const abc =  api._get('http://localhost:8888/api/values/');
+    //console.log(abc);
   }
 
-  getData() {
-    return this.http.get(this.url).map((res: Response) => res.json());
-  }
-  getCotacts() {
-    this.getData().subscribe(data => {
-      console.log(data);
-      this.data = data;
-    });
-  }
-}
+  // getData() {
+  //   return this.http.get(this.url).map((res: Response) => res.json());
+  // }
+  // getCotacts() {
+  //   this.getData().subscribe(data => {
+  //     console.log(data);
+  //     this.data = data;
+  //   });
+//   // }
+// }
