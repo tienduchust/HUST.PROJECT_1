@@ -68,11 +68,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppHustContext.cs" />
+    <Compile Include="Dao\UserDao.cs" />
+    <Compile Include="Domain\JobInformation.cs" />
     <Compile Include="Domain\JobPosition.cs" />
-    <Compile Include="Domain\Status.cs" />
-    <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\PaymentConfirmation.cs" />
+    <Compile Include="Domain\ProcessManager.cs" />
+    <Compile Include="Domain\ProcessManagerUser.cs" />
     <Compile Include="Domain\Project.cs" />
-    <Compile Include="Domain\File.cs" />
+    <Compile Include="Domain\Status.cs" />
+    <Compile Include="Domain\UserCompany.cs" />
     <Compile Include="Migrations\201709121909392_InitDb.cs" />
     <Compile Include="Migrations\201709121909392_InitDb.Designer.cs">
       <DependentUpon>201709121909392_InitDb.cs</DependentUpon>

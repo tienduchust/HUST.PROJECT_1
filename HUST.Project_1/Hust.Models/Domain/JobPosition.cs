@@ -1,13 +1,21 @@
-﻿using System;
-
-namespace Hust.Models.Models
+namespace Hust.Models.Domain
 {
-    public class JobPosition
-    {
-        public Guid JobPositionId { get; set; }
-        public string JobName { get; set; }
-        public Guid StatusId { get; set; }
-        
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
+    [Table("JobPosition")]
+    public partial class JobPosition
+    {
+        [StringLength(100)]
+        public string JobPositionID { get; set; }
+
+        [StringLength(250)]
+        public string JobName { get; set; }
+
+        [StringLength(100)]
+        public string StatusID { get; set; }
     }
 }
