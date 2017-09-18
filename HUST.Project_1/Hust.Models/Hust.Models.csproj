@@ -77,14 +77,6 @@
     <Compile Include="Domain\Project.cs" />
     <Compile Include="Domain\Status.cs" />
     <Compile Include="Domain\UserCompany.cs" />
-    <Compile Include="Migrations\201709121909392_InitDb.cs" />
-    <Compile Include="Migrations\201709121909392_InitDb.Designer.cs">
-      <DependentUpon>201709121909392_InitDb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201709141653411_addJobPositionStatus.cs" />
-    <Compile Include="Migrations\201709141653411_addJobPositionStatus.Designer.cs">
-      <DependentUpon>201709141653411_addJobPositionStatus.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Share\Constants.cs" />
@@ -102,14 +94,6 @@
       <Project>{abbc4fc8-80f1-4624-9c9e-6912e3ef568a}</Project>
       <Name>Hust.Common</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201709121909392_InitDb.resx">
-      <DependentUpon>201709121909392_InitDb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709141653411_addJobPositionStatus.resx">
-      <DependentUpon>201709141653411_addJobPositionStatus.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

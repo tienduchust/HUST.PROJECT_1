@@ -10,16 +10,8 @@ namespace Hust.Models.Domain
     public partial class ProcessManagerUser
     {
         [Key]
-        [Column(Order = 0)]
-        [StringLength(100)]
         public string UserID { get; set; }
-
-        [Key]
-        [Column(Order = 1)]
-        [StringLength(100)]
         public string ProjectID { get; set; }
-
-        [StringLength(100)]
         public string JobPositionID { get; set; }
     }
 }

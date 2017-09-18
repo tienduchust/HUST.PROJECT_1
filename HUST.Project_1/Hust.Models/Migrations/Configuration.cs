@@ -9,7 +9,7 @@ namespace Hust.Models.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Hust.Models.AppHustContext context)
