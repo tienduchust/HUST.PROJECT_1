@@ -9,10 +9,8 @@ namespace Hust.Models.Domain
     [Table("JobPosition")]
     public partial class JobPosition
     {
-        [StringLength(100)]
+        [Key]
         public string JobPositionID { get; set; }
-
-        [StringLength(250)]
         public string JobName { get; set; }
 
         [StringLength(100)]

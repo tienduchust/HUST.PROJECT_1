@@ -15,7 +15,7 @@ namespace Hust.Models
         // If you wish to target a different database and/or database provider, modify the 'AppHustContext' 
         // connection string in the application configuration file.
         public AppHustContext()
-            : base("name=Hust_Project_1")
+            : base("name=AppHustContext")
         {
         }
 
