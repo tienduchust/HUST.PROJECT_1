@@ -3,7 +3,9 @@
 <!-- END # BOOTSNIP INFO -->
 
 <!-- BEGIN # MODAL LOGIN -->
-<div style="text-align: center; margin-top:50px;"><h4 style="color: white; font-size: 30px;">BUSINESS MANAGEMENT SYSTEM</h4></div>
+<div style="text-align: center; margin-top:50px;">
+    <h4 style="color: white; font-size: 30px;">BUSINESS MANAGEMENT SYSTEM</h4>
+</div>
 <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header" align="center">
@@ -20,13 +22,14 @@
                     <input id="login_password" class="form-control" type="password" placeholder="Password" required>
                     <div class="checkbox">
                         <label>
-                                    <input type="checkbox"> Remember me
+                                    <input type="checkbox"> Rememberme
                                 </label>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                        <button (click)="goLogin()" type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+
                     </div>
 
                 </div>

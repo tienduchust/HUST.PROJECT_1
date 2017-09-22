@@ -1,5 +1,9 @@
+import { Routes, RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import{Router} from '@angular/router'
+
+
 @Component({
   selector: 'app-authentication',
   templateUrl: './authentication.component.html',
@@ -7,7 +11,7 @@ import * as $ from 'jquery';
 })
 export class AuthenticationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 
   ngOnInit() {
@@ -71,6 +75,8 @@ export class AuthenticationComponent implements OnInit {
     });
   }
 
-
+goLogin():void{
+  this.router.navigate(['/dashboard']);
+}
 
 }
