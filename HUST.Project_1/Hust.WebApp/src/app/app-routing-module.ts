@@ -8,8 +8,10 @@ import{DashboardComponent} from './dashboard/dashboard.component';
 const routes:Routes=[
     {path:'',redirectTo:'/login', pathMatch:'full'},
     {path:'login', component:AuthenticationComponent},
-    {path:'dashboard', component:DashboardComponent},
-    {path:'email', component:EmailComponent, outlet:'email1'} 
+    {path:'dashboard', component:DashboardComponent, 
+    children:[
+        {path:'email', component: EmailComponent, outlet:"appemail"}
+    ]}    
 ];
 @NgModule({
 imports:[RouterModule.forRoot(routes)],
