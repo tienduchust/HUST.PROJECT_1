@@ -8,14 +8,15 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing-module';
 import { EmailComponent } from './email/email.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     AuthenticationComponent,
     SidebarComponent,
     DashboardComponent,
-    EmailComponent   
-  ],
+    EmailComponent
+      ],
   imports: [
     BrowserModule,
     AppRoutingModule
