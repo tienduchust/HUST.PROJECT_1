@@ -6,6 +6,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 
+import { CommonService } from './common.service';
+
 import { AppRoutingModule } from './app-routing-module';
 import { EmailComponent } from './email/email.component';
 
@@ -27,7 +29,7 @@ import { EmailComponent } from './email/email.component';
   //     }
   //   ])
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

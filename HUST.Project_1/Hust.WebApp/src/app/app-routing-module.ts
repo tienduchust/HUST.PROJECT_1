@@ -10,7 +10,7 @@ const routes:Routes=[
     {path:'login', component:AuthenticationComponent},
     {path:'dashboard', component:DashboardComponent, 
     children:[
-        {path:'email', component: EmailComponent, outlet:"appemail"}
+        {path:'email', component: EmailComponent, outlet:'appemail'}
     ]}    
 ];
 @NgModule({
