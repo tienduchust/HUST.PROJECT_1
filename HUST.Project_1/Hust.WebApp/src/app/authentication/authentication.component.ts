@@ -1,8 +1,8 @@
 import { Routes, RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import{Router} from '@angular/router'
-
+import { Router } from '@angular/router'
+import { CommonService } from './../common.service'
 
 @Component({
   selector: 'app-authentication',
@@ -11,7 +11,7 @@ import{Router} from '@angular/router'
 })
 export class AuthenticationComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private commonSer: CommonService) { }
 
 
   ngOnInit() {
@@ -25,14 +25,14 @@ export class AuthenticationComponent implements OnInit {
       const $msgShowTime = 2000;
 
       $('form').submit(function () {
-            const $lg_username = $('#login_username').val();
-            const $lg_password = $('#login_password').val();
-            if ($lg_username === 'ERROR') {
-              msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), 'error', 'glyphicon-remove', 'Send error');
-            } else {
-              msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), 'success', 'glyphicon-ok', 'Send OK');
-            }
-           return false;
+        const $lg_username = $('#login_username').val();
+        const $lg_password = $('#login_password').val();
+        if ($lg_username === 'ERROR') {
+          msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), 'error', 'glyphicon-remove', 'Send error');
+        } else {
+          msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), 'success', 'glyphicon-ok', 'Send OK');
+        }
+        return false;
       });
 
       // $('#login_register_btn').click(function () { modalAnimate($formLogin, $formRegister); });
@@ -75,8 +75,7 @@ export class AuthenticationComponent implements OnInit {
     });
   }
 
-goLogin():void{
-  this.router.navigate(['/dashboard']);
-}
-
+  goState(state): void {
+    this.commonSer.goState(state);
+  }
 }

@@ -5,9 +5,9 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
-
 import { AppRoutingModule } from './app-routing-module';
 import { EmailComponent } from './email/email.component';
+import {CommonService} from './common.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +15,7 @@ import { EmailComponent } from './email/email.component';
     SidebarComponent,
     DashboardComponent,
     EmailComponent   
+ 
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,7 @@ import { EmailComponent } from './email/email.component';
   //     }
   //   ])
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
