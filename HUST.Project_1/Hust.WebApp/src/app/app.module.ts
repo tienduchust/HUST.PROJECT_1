@@ -10,6 +10,7 @@ import { CommonService } from './common.service';
 
 import { AppRoutingModule } from './app-routing-module';
 import { EmailComponent } from './email/email.component';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EmailComponent } from './email/email.component';
     AuthenticationComponent,
     SidebarComponent,
     DashboardComponent,
-    EmailComponent
+    EmailComponent,
+    AuthComponent
       ],
   imports: [
     BrowserModule,
