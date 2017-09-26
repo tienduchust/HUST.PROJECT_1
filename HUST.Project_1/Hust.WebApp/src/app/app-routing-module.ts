@@ -4,10 +4,11 @@ import { NgModule } from '@angular/core';
 
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthComponent } from './auth/auth.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
-    { path: 'login', component: AuthenticationComponent },
+    { path: 'login', component: AuthComponent },
     {
         path: 'dashboard', component: DashboardComponent,
         children: [

@@ -4,41 +4,41 @@
 
 <!-- BEGIN # MODAL LOGIN -->
 <div class="container-fluid">
-<div style="text-align: center; margin-top:50px;">
-    <h4 style="color: white; font-size: 30px;">BUSINESS MANAGEMENT SYSTEM</h4>
-</div>
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header" align="center">
-            <img class="img-circle" id="img_logo" src="./../../assets/img/logo-login_1.png">
-        </div>
+    <div style="text-align: center; margin-top:50px;">
+        <h4 style="color: white; font-size: 30px;">BUSINESS MANAGEMENT SYSTEM</h4>
+    </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" align="center">
+                <img class="img-circle" id="img_logo" src="./../../assets/img/logo-login_1.png">
+            </div>
 
-        <!-- Begin # DIV Form -->
-        <div id="div-forms">
+            <!-- Begin # DIV Form -->
+            <div id="div-forms">
 
-            <!-- Begin # Login Form -->
-            <form id="login-form">
-                <div class="modal-body">
-                    <input id="login_username" class="form-control" type="text" placeholder="Username" required>
-                    <input id="login_password" class="form-control" type="password" placeholder="Password" required>
-                    <div class="checkbox">
-                        <label>
+                <!-- Begin # Login Form -->
+                <form id="login-form">
+                    <div class="modal-body">
+                        <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                        <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                        <div class="checkbox">
+                            <label>
                                     <input type="checkbox"> Rememberme
                                 </label>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <div>
-                        <button (click)="goState('/dashboard')" type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                    <div class="modal-footer">
+                        <div>
+                            <button (click)="goState('/dashboard')" type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+
+                        </div>
 
                     </div>
+                </form>
+                <!-- End # Login Form -->
 
-                </div>
-            </form>
-            <!-- End # Login Form -->
-
-            <!-- Begin | Lost Password Form -->
-            <!-- <form id="lost-form" style="display:none;">
+                <!-- Begin | Lost Password Form -->
+                <!-- <form id="lost-form" style="display:none;">
                 <div class="modal-body">
                     <div id="div-lost-msg">
                         <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -56,10 +56,10 @@
                     </div>
                 </div>
             </form> -->
-            <!-- End | Lost Password Form -->
+                <!-- End | Lost Password Form -->
 
-            <!-- Begin | Register Form -->
-            <!-- <form id="register-form" style="display:none;">
+                <!-- Begin | Register Form -->
+                <!-- <form id="register-form" style="display:none;">
                 <div class="modal-body">
                     <div id="div-register-msg">
                         <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -79,12 +79,12 @@
                     </div>
                 </div>
             </form> -->
-            <!-- End | Register Form -->
+                <!-- End | Register Form -->
+
+            </div>
+            <!-- End # DIV Form -->
 
         </div>
-        <!-- End # DIV Form -->
-
     </div>
-</div>
 </div>
 <!-- END # MODAL LOGIN -->
