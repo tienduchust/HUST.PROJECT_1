@@ -45,6 +45,10 @@ body {
     margin-bottom: 20px;
 }
 
+i {
+    margin-right: 3%;
+}
+
 h3 {
     margin: 0;
     padding: 0 0 20px;
@@ -69,7 +73,8 @@ h4 {
     margin-bottom: 20px;
 }
 
-.loginBox input[type="text"],
+
+/* .loginBox input[type="text"],
 .loginBox input[type="password"] {
     border: none;
     border-bottom: 2px solid #262626;
@@ -80,6 +85,11 @@ h4 {
     font-size: 16px;
     padding-left: 20px;
     box-sizing: border-box;
+} */
+
+.loginBox input[type="text"],
+.loginBox input[type="password"].ng-invalid {
+    border: 1px solid red;
 }
 
 ::placeholder {
@@ -91,8 +101,8 @@ h4 {
 }
 
 .inputBox span {
-    position: absolute;
-    top: 10px;
+    position: inherit;
+    top: 20px;
     color: #262626;
 }
 
@@ -111,6 +121,17 @@ h4 {
 
 .loginBox button {
     cursor: pointer;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+    border-left: 5px solid #42A948;
+    /* green */
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid #a94442;
+    /* red */
 }
 
 @media only screen and (max-width: 1200px) {

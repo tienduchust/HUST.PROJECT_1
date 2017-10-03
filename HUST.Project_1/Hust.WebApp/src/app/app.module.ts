@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
@@ -12,6 +11,10 @@ import { AppRoutingModule } from './app-routing-module';
 import { EmailComponent } from './email/email.component';
 import { AuthComponent } from './auth/auth.component';
 
+import { BrowserModule } from '@angular/platform-browser';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,15 +26,11 @@ import { AuthComponent } from './auth/auth.component';
       ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  //   RouterModule.forRoot([
-  //     {
-  //       path: 'hustDashBoard',
-  //       component: DashboardComponent
-  //     }
-  //   ])
+    AppRoutingModule  
   ],
   providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

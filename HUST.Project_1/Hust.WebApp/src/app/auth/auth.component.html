@@ -4,16 +4,24 @@
 <div class="loginBox">
     <div class="glass">
         <img src="./../../assets/img/logo-login_1.png" width="100px" height="100px" class="user">
-        <h3>Sign in here</h3>
         <div id="div-forms">
-            <form id="login-form">
-                <div class="inputBox">
-                    <input id="login_username" class="form-control" type="text" name="" placeholder="Username" required>
-                    <span><i class="fa fa-user" aria-hidden="true"></i></span>
+            <form id="login-form" formGroup="myForm">
+                <span><i class="fa fa-user" aria-hidden="true"></i>User</span>
+                <div class="inputBox form-group" [ngClass]="{'has-danger': email.invalid && (email.dirty || email.touched),'has-success':email.valid && (email.dirty || email.touched)}">
+                    <input id="login_username" class="form-control" type="email" placeholder="Username" formControlName="email" required>
+                    <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
+                        <p *ngIf="email.errors.required">Email is required</p>
+                        <p *ngIf="password.errors.pattern">The email address must contain at least the @ character</p>
+                    </div>
                 </div>
-                <div class="inputBox">
-                    <input id="login_password" class="form-control" type="password" name="" placeholder="Password" required>
-                    <span><i class="fa fa-lock" aria-hidden="true"></i></span>
+                <span><i class="fa fa-lock" aria-hidden="true"></i>Password</span>
+                <div class="inputBox form-group" [ngClass]="{
+                    'has-danger': password.invalid && (password.dirty || password.touched),
+                    'has-success': password.valid && (password.dirty || password.touched)}">
+                    <input id="login_password" class="form-control" type="password" placeholder="Password" formControlName="password" required>
+                    <div class="form-control-feedback" *ngIf="password.errors && (password.dirty || password.touched)">
+                        <p *ngIf="password.errors.required">Password is required</p>
+                    </div>
                 </div>
                 <div class="checkbox">
                     <label>
