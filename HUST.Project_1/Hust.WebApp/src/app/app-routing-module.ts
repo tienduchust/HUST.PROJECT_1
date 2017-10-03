@@ -2,7 +2,7 @@ import { EmailComponent } from './email/email.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { AuthenticationComponent } from './authentication/authentication.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthComponent } from './auth/auth.component';
 
