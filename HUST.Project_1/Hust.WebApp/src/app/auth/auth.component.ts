@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
-  constructor(private commonSer:CommonService) { }
+  constructor(private commonSer: CommonService) { }
 
   ngOnInit() {
     const $formLogin = $('#login-form');
